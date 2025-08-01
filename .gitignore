@@ -1,0 +1,16 @@
+# Ignore downloaded videos and other output files
+*.mp4
+*.webm
+*.mkv
+*.avi
+*.mov
+*.flv
+*.wmv
+*.mp3
+*.wav
+*.aac
+*.ogg
+*.flac
+*.opus
+*.m4a
+YT/

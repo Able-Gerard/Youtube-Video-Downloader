@@ -19,8 +19,11 @@ def download_video():
         messagebox.showerror("Error", "Please select a download location.")
         return
 
+    # Always save downloads to a 'YT' subfolder inside the selected folder
+    download_dir = os.path.join(folder, 'YT')
+    os.makedirs(download_dir, exist_ok=True)
     ydl_opts = {
-        'outtmpl': os.path.join(folder, '%(title)s.%(ext)s'),
+        'outtmpl': os.path.join(download_dir, '%(title)s.%(ext)s'),
         'format': 'best',
         'merge_output_format': 'mp4',
         'quiet': True,
